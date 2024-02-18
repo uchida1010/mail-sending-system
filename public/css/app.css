@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.table th {
+    border: 1px solid #ddd;
+    height: 30px;
+    background-color: gray;
+    color: white;
+}
+
+.table td {
+    border: 1px solid #ddd;
+    height: 50px;
+    background-color: #fff;
+}
+
+.header-container {
+    background-color: rgb(32, 56, 104);
+    display: flex;
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    padding: 20px 40px;
+    align-items: center;
+}
+
+.logo-wrap {
+    display: inline-block;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    width: 500px;
+}
+
+.logo-img img {
+    width: 100px;
+}
+
+.logo-text {
+    align-items: center;
+}
+
+.navbar-wrap {
+    width: 70%;
+}
+
+.navbar-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    width: 150px;
+    height: 70px;
+}
+
+.nav-link {
+    font-size: 15px;
+    color: white;
+    line-height: 65px;
+}
+
+.main-container {
+    padding: 20px 40px;
+    width: 100%;
+    background-color: #daeaf1;
+    min-height: calc(100vh - 90px);
+}
+
+.main-text {
+    margin-bottom: 100px;
+}
+
+.table {
+    margin: 10px auto;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+}
+
+.footer-container {
+    background-color: rgb(42, 51, 69);
+    color: white;
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
+}
+
+.search-item .clear-btn {
+    display: block;
+    width: 150px;
+    padding: 10px 0;
+    text-align: center;
+    align-items: center;
+    background-color: #ddd;
+    color: #000;
+    border: #bbb solid 1px;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.search-item .clear-btn:hover {
+    background-color: #ddd;
+    opacity: 0.8;
+    text-decoration: none;
+  }
+
+.btn-register {
+    margin-top: 50px;
+}
+
+.logo-text a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-logout {
+    border-style: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.input-box {
+    min-width: 10px;
+    display: inline-block;
+    height: 40px;
+}
+
+.home-container {
+    margin: 0 auto;
+}
+
+.home-menu-list {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.menu-item {
+    width: 200px;
+    text-align: center;
+    height: 50px;
+    background-color: rgb(32, 56, 104);
+    border-radius: 5px;
+    line-height: 48px;
+}
+
+.menu-item:hover {
+    opacity: 0.8;
+}
+
+.title {
+    text-align: center;
+}
+
+.menu-anchor {
+    color: #fff;
+}
+
+.page-title h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.create-wrap {
+    background-color: #fff;
+}
+
+.create-table {
+    padding: 20px 20px;
+}
+
+.row {
+    margin-top: 8px;
+}
+
+.input-field {
+    width: 100%;
+    border:#ddd 1px solid;
+    height: 48px;
+    font-size: 18px;
+}
+
+.textarea-field {
+    width: 100%;
+    border:#ddd 1px solid;
+    height: 96px;
+    font-size: 18px;}
+
+.form-label {
+    margin: 0;
+}
+
+.label-txt {
+    font-weight: bold;
+}
+
+.search-wrap {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.search-box {
+    border: 1px #b1afaf solid;
+    border-radius: 5px 5px 0 0;
+}
+
+.search-text h3{
+    background-color: #ddd;
+    align-items: center;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px 4px 0 0;
+}
+
+.search-item input {
+    height: 32px;
+    font-size: 12px;
+}
+
+.search-flex {
+    display: flex;
+}
+
+.search-item {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-search {
+    margin-left: 20px;
+    width: 80px;
+}
+
+.search-item .clear-btn {
+    display: block;
+    width: 80px;
+    height: 34px;
+    font-size: 8px;
+    font-weight: bolder;
+    text-align: center;
+    align-items: center;
+    background-color: #ddd;
+    color: #000;
+    border: #bbb solid 1px;
+    border-radius: 5px;
+    list-style: 15px;
+}
+
+.search-item .clear-btn:hover {
+    background-color: #ddd;
+    opacity: 0.5;
+    text-decoration: none;
+  }

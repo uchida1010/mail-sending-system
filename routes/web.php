@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InquiryController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::prefix('mail-sending-system')->group(function () {
+    Route::get('/', function () {
+        return view('home');
+    });
+    Route::get('/inquiry/create', [InquiryController::class, 'create'])->name('inquiry.create');
+
+    Route::get('/user/index', [UserController::class, 'index'])->name('user.index');
 });

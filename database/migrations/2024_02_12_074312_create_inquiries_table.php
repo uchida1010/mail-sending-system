@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('category');
             $table->string('company');
             $table->string('name');
+            $table->string('tel');
             $table->string('email');
             $table->string('content');
             $table->string('note');
