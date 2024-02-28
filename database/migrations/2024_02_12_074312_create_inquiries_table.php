@@ -15,13 +15,12 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('send_user_id');
-            $table->string('category');
             $table->string('company');
             $table->string('name');
             $table->string('tel');
             $table->string('email');
-            $table->string('content');
-            $table->string('note');
+            $table->string('content')->nullable();
+            $table->string('note')->nullable();
             $table->timestamps();
         });
     }

@@ -23,7 +23,10 @@ Route::prefix('mail-sending-system')->group(function () {
     Route::get('/', function () {
         return view('home');
     });
-    Route::get('/inquiry/create', [InquiryController::class, 'create'])->name('inquiry.create');
-
+    Route::prefix('inquiry')->group(function () {
+        Route::get('index', [InquiryController::class, 'index'])->name('inquiry.index');
+        Route::get('create', [InquiryController::class, 'create'])->name('inquiry.create');
+        Route::post('create', [InquiryController::class, 'store'])->name('inquiry.store');
+    });
     Route::get('/user/index', [UserController::class, 'index'])->name('user.index');
 });

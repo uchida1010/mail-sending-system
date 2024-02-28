@@ -2,7 +2,7 @@
     <div class="header-container">
         <div class="logo-wrap">
         <div class="logo-text">
-        <a href="{{ url('sales-system')}}">
+        <a href="{{ url('mail-sending-system')}}">
         メール送信システム
         </a>
         </div>

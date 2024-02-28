@@ -20,12 +20,11 @@ class InquiryFactory extends Factory
         return [
             'user_id' => fake()->numberBetween(1, 10),
             'send_user_id' => fake()->numberBetween(1, 10),
-            'category' => Arr::random(['A', 'B', 'C']),
             'company' => fake()->company(),
             'name' => fake()->name(),
+            'tel' => fake()-> phoneNumber(),
             'email' => fake()->safeEmail(),
             'content' => fake()->text(10),
-            'note' => fake()->text(10),
         ];
     }
 }

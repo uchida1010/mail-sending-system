@@ -13,7 +13,8 @@
     <nav class="home-menu-container">
         <ul class="home-menu-list">
             <li class="menu-item"><a href="{{ route('user.index')  }}" class="menu-anchor">社員マスタ</a></li>
-            <li class="menu-item"><a href="{{ url('inquiry.create')  }}" class="menu-anchor">お問い合わせフォーム</a></li>
+            <li class="menu-item"><a href="{{ route('inquiry.create')  }}" class="menu-anchor">お問い合わせ</a></li>
+            <li class="menu-item"><a href="{{ route('inquiry.index')  }}" class="menu-anchor">お問い合わせ一覧</a></li>
         </ul>
     </nav>
 </div>
