@@ -53,7 +53,7 @@ class MailSend extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail.inquiry',
+            view: 'mail.index',
             with: [
                 'sendUserName' => $this->send_user->name,
                 'company' => $this->company,
