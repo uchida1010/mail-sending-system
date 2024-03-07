@@ -43,7 +43,7 @@ class MailSend extends Mailable
         return new Envelope(
             from: new Address('test@example.com'),
             subject: 'お問い合わせがありました。',
-            to: $this->send_user->email,
+            to: 'test@example.com'
         );
     }
 
@@ -55,7 +55,6 @@ class MailSend extends Mailable
         return new Content(
             view: 'mail.index',
             with: [
-                'sendUserName' => $this->send_user->name,
                 'company' => $this->company,
                 'name' => $this->name,
                 'tel' => $this->tel,

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Inquiry;
 use App\Models\User;
 use App\Http\Requests\InquiryRequest;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailSend;
 
 class InquiryController extends Controller
 {
@@ -26,18 +28,12 @@ class InquiryController extends Controller
         return view('inquiry.index', compact('inquiries'));
     }
 
-    public function store(InquiryRequest $request) {
-        
+    public function send(InquiryRequest $request)
+    {
         $validated = $request->validated();
 
-        $inquiries = new Inquiry;
+        Mail::to($request->user())->send(new MailSend($validated['user'], $validated['content'], $validated['company'], $validated['name'], $validated['tel'], $validated['email']));
 
-        $inquiry = $inquiries->store($validated);
-
-        if ($inquiry === false) {
-            return redirect('inquiry/create')->withInput();
-        }
-
-        return redirect('mail-sending-system/inquiry/index');
+        return redirect('/mail-sending-system/inquiry/index');
     }
 }

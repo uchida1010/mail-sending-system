@@ -26,7 +26,7 @@ Route::prefix('mail-sending-system')->group(function () {
     Route::prefix('inquiry')->group(function () {
         Route::get('index', [InquiryController::class, 'index'])->name('inquiry.index');
         Route::get('create', [InquiryController::class, 'create'])->name('inquiry.create');
-        Route::post('create', [InquiryController::class, 'store'])->name('inquiry.store');
+        Route::post('send', [InquiryController::class, 'send'])->name('inquiry.send');
     });
     Route::get('/user/index', [UserController::class, 'index'])->name('user.index');
 });

@@ -12,7 +12,7 @@ HOME|メール送信システム
     </div>
     <div class="create-wrap">
         <div class="create-form">
-            <form action="{{ route('inquiry.store') }}" method="post">
+            <form action="{{ route('inquiry.send') }}" method="post">
                 @csrf
                 <div class="create-table">
                     <div class="row">
