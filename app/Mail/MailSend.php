@@ -16,6 +16,7 @@ class MailSend extends Mailable
     use Queueable, SerializesModels;
 
     public $send_user; 
+    public $send_user_mail;
     public $content;
     public $company;
     public $name;
@@ -25,9 +26,10 @@ class MailSend extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct($send_user, $content, $company, $name, $tel, $email)
+    public function __construct($send_user,$send_user_mail, $content, $company, $name, $tel, $email)
     {
         $this->send_user = $send_user;  
+        $this->send_user_mail = $send_user_mail; 
         $this->content = $content;
         $this->company = $company;
         $this->name = $name;
@@ -41,9 +43,9 @@ class MailSend extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('test@example.com'),
+            from: new Address('test@exmple.com'),
             subject: 'お問い合わせがありました。',
-            to: 'test@example.com'
+            to: $this->send_user_mail,
         );
     }
 
@@ -55,6 +57,7 @@ class MailSend extends Mailable
         return new Content(
             view: 'mail.index',
             with: [
+                'user' => $this->send_user,
                 'company' => $this->company,
                 'name' => $this->name,
                 'tel' => $this->tel,

@@ -32,7 +32,9 @@ class InquiryController extends Controller
     {
         $validated = $request->validated();
 
-        Mail::to($request->user())->send(new MailSend($validated['user'], $validated['content'], $validated['company'], $validated['name'], $validated['tel'], $validated['email']));
+        $user = User::find($validated['user']);
+
+        Mail::to($request->user())->send(new MailSend($user->name,$user->email, $validated['content'], $validated['company'], $validated['name'], $validated['tel'], $validated['email']));
 
         return redirect('/mail-sending-system/inquiry/index');
     }
